@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="BarbaraGittings.css">
+        <title>Barbara Gittings</title>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <nav class = "navbar">
+                <div class = "contain">
+                    <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                    <div class = "navbar-nav">
+                      <a href = "about.html">About</a>
+                      <a href = "article.html">Article</a>
+                      <a href = "contact.html">Contact</a>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+        <div class="name">
+            <h1>Barbara Gittings</h1>
+        </div>
+        <div class="year">
+            <h2>1932 - 2007</h2>
+        </div>
+        <div class="pic">
+            <img src="images/Celestial.png" alt="Barbara Gittings" height="500vh">
+        </div>
+        <div class="container">
+            <div class="card card1 card1-top">
+                <dl>
+                    <dt class="dt-heading">Early Life</dt>
+                    <dd>Born on July 31, 1932, in Vienna, Austria, and grew up in Wilmington, Delaware.</dd>
+                    <dd>Began realizing she was a lesbian in her teenage yearsdue to her attraction to other girls.</dd>
+                    <dd>Was rejected from her school's NHS because a teacher suspected that she was lesbian.</dd>
+                    <dd>Majored in drama at Northwestern University, and rumors of her being gay prompted her to further explore her sexuality.</dd>
+                </dl>
+                <button onclick="button1()">Next</button>
+            </div>
+
+            <div class="card card2 card2-back">
+                <dl>
+                    <dt class="dt-heading">Achievements</dt>
+                    <dd>Became a prominent LGBTQ rights activist in the 1950s and 1960s.</dd>
+                    <dd>Worked to remove homosexuality from the American Psychiatric Association's list of mental disorders.</dd>
+                    <dd>Co-founded the Daughters of Bilitis, the first lesbian rights organization in the United States.
+                    </dd>
+                    <dd>Organized the first LGBTQ rights protests at the White House and the Independence Hall in Philadelphia in the 1960s.</dd>
+                </dl>
+                <button onclick="button2()">Next</button>
+            </div>
+
+            <div class="card card3 card3-back">
+                <dl>
+                    <dt class="dt-heading">Challenges</dt>
+                    <dd>Faced discrimination and harassment due to her sexual orientation throughout her life, but continued to advocate for LGBTQ rights.</dd>
+                    <dd>Flunked out of school due to her focus on studying the LGBTQ+ movement.</dd>
+                    <dd>Faced homophobic reactions towards her during her formative years.</dd>
+                </dl>
+                <button onclick="button3()">Next</button>
+            </div>
+
+            <div class="card card4 card4-back">
+                <dl>
+                    <dt class="dt-heading">Personal Life</dt>
+                    <dd>Had a long-term relationship with her partner Kay Tobin Lahusen, who was also a prominent LGBTQ rights activist and photographer.</dd>
+                    <dd>Died on February 18, 2007, at the age of 74, from breast cancer.</dd>
+                    <dd>Her legacy as a trailblazer for LGBTQ rights and representation continues to inspire activists today.</dd>
+                </dl>
+                <button onclick="button4()">Next</button>
+            </div>
+
+        </div>
+        <script src="marie.js"></script>
+        
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "4d8ab45c-e915-4c12-bf8f-371df6ac0b2d", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "74cd3fc0-70df-4586-8572-7a5591c4b68b", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </body>
+
+</html>

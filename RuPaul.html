@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="RuPaul.css">
+        <title>RuPaul</title>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <nav class = "navbar">
+                <div class = "contain">
+                    <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                    <div class = "navbar-nav">
+                      <a href = "about.html">About</a>
+                      <a href = "article.html">Article</a>
+                      <a href = "contact.html">Contact</a>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+        <div class="name">
+            <h1>RuPaul</h1>
+        </div>
+        <div class="year">
+            <h2>1960 - Present</h2>
+        </div>
+        <div class="pic">
+            <img src="images/BasicsofStocks.png" alt="Oscar Wilde" height="500vh">
+        </div>
+        <div class="container">
+            <div class="card card1 card1-top">
+                <dl>
+                    <dt class="dt-heading">Early Life</dt>
+                    <dd>Born on November 17, 1960, in San Diego, California, as RuPaul Andre Charles.</dd>
+                    <dd>Was one of four siblings in a family that frequently moved around due to his father's work as a chemical plant operator.</dd>
+                    <dd>Began experimenting with drag in his teenage years and eventually moved to Atlanta to pursue a career as a drag performer.</dd>
+                </dl>
+                <button onclick="button1()">Next</button>
+            </div>
+
+            <div class="card card2 card2-back">
+                <dl>
+                    <dt class="dt-heading">Achievements</dt>
+                    <dd>Became widely known in the 1990s as a drag performer, singer, and actor.</dd>
+                    <dd>Host and executive producer of the reality competition show "RuPaul's Drag Race", which premiered in 2009 and has become a cultural phenomenon.</dd>
+                    <dd>Has released numerous albums and singles, including the hit single "Supermodel (You Better Work)".</dd>
+                    <dd>Received a star on the Hollywood Walk of Fame in 2018.</dd>
+                    <dd>Has won multiple Emmy Awards for "RuPaul's Drag Race".</dd>
+                </dl>
+                <button onclick="button2()">Next</button>
+            </div>
+
+            <div class="card card3 card3-back">
+                <dl>
+                    <dt class="dt-heading">Challenges</dt>
+                    <dd>Expereinced a volatile childhood in which he had to act as amediator in his family.</dd>
+                    <dd>He contemplated suicide when he first moved to New York in 1984.</dd>
+                    <dd>He struggled with substane abuse due to his early life.</dd>
+                </dl>
+                <button onclick="button3()">Next</button>
+            </div>
+
+            <div class="card card4 card4-back">
+                <dl>
+                    <dt class="dt-heading">Personal Life</dt>
+                    <dd>Has been open about his gender identity, describing himself as a "genderfluid drag queen".</dd>
+                    <dd>Has been in a relationship with Australian rancher Georges LeBar since 1994, and the couple married in 2017.</dd>
+                    <dd>Is an advocate for LGBTQ+ rights and has been involved in various charities and organizations supporting the community.</dd>
+                </dl>
+                <button onclick="button4()">Next</button>
+            </div>
+
+        </div>
+        <script src="marie.js"></script>
+        
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "f8363cc4-4db8-43b1-b80b-a6a58a5b2124", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "74cd3fc0-70df-4586-8572-7a5591c4b68b", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </body>
+
+</html>

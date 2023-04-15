@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Contact Form</title>
+        <link rel="stylesheet" type="text/css" href="contact.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('2G5NGf3gQd81Q36yp');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_qwvr2s4', 'template_9pw96ui', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+        <script src = "contact.js"></script>
+    </head>
+<body>
+        <!-- header -->
+    <header>
+        <nav class = "navbar">
+            <div class = "container">
+                <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                <div class = "navbar-nav">
+                  <a href = "about.html">About</a>
+                  <a href = "article.html">Article</a>
+                  <a href = "contact.html">Contact</a>
+                </div>
+              </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end of header -->
+
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+                <form id="contact-form">
+				<h2>Contact Us</h2>
+				    <input id = "user_name" type="text" class="field" placeholder="Your Name">
+				    <input id = "user_email" type="text" class="field" placeholder="Your Email">
+				    <input id = "subject" type="text" class="field" placeholder="Subject">
+				    <textarea id = "message" placeholder="Message" class="field"></textarea>
+				    <button type = "submit" name = "submit" class="btn" onclick="SendMail()">Send</button>
+                </form>
+			</div>
+		</div>
+	</div>
+</body>
+</html> 

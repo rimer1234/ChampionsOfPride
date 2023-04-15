@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+html, body 
+{ 
+  height: 100%;
+  background-color: #ffe4b6;
+}
+:root{
+    --dark: #39393d;
+    --exDark: #260e5b;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Quicksand);
+}
+.contain{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+.navbar{
+    background: rgb(253, 167, 86);
+    padding: .5rem;
+    font-family: var(--Quicksand);
+}
+.navbar-brand{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    display: block;
+    text-decoration: none;
+    font-family: 'Quicksand';
+    letter-spacing: 1px;
+    padding: 0.4rem 0.1rem;
+}
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    text-align: center;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.4rem 0.1rem;
+    letter-spacing: 3px;
+    transition: opacity 0.5s ease;
+}
+.navbar-nav a:hover{
+    opacity: 0.7;
+}
+
+.container 
+{
+  display: flex; justify-content: center; align-items: right;
+  width: 100%; height: 100%;
+  margin-top: 5%;
+}
+
+.name {
+  padding-top: 25px;
+  display: flex;
+  justify-content:center;
+  font-family: 'Rowdies', cursive;
+  font-size:25px;
+}
+
+.year {
+  display: flex;
+  justify-content:center;
+  font-family: 'Rowdies', cursive;
+  font-size:20px;
+}
+
+.pic {
+  display: flex;
+  justify-content: left;
+  display: inline-flex; flex-direction: column; 
+  position:absolute;
+  margin:50px;
+}
+
+.card {
+  height: 460px; width: 300px;
+  background:  #eb8798;
+  display: inline-flex; flex-direction: column; justify-content: space-between;
+  padding: 12px;
+  position: absolute;
+  font-family: 'Neucha', cursive;
+  color: rgba(255,255,255,0.7)
+}
+
+dt{
+  border-bottom: 2px solid #a1ffca;
+  line-height: 2em;
+}
+
+dd {
+  margin: 12px 0;
+  white-space: normal;
+}
+
+button {
+  border: 0px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+  color: rgba(255,255,255,0.8);
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in all;
+}
+
+button:focus { outline: none;}
+button:hover {background: rgba(0,0,0,0.3);}
+
+.card2 {
+  background:  #fbffb8;
+  color: rgba(0,0,0,0.7)
+}
+/* Animations */
+
+.card1-top {
+  animation-name: foreground-c1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card2-top {
+  animation-name: foreground-c2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card1-back {
+  animation-name: background-c1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card2-back {
+  animation-name: background-c2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes background-c1 {
+  0%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(80px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
+  }
+}
+
+@keyframes background-c2 {
+  0%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+/*    z-index: 1; */
+    transform: perspective(100px) translate3d(-80px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
+  }
+}
+
+@keyframes foreground-c1 {
+  0%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(50px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50%{
+    transform: perspective(100px) translate3d(-80px, 0px, -15px);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(80px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes foreground-c2 {
+  0%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(-50px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50%{
+    transform: perspective(100px) translate3d(80px, 0px, -15px);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(-80px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*New - Card 3*/
+
+.card3 {
+  background:  #7adcff;
+  color: rgba(0,0,0,0.8)
+}
+
+/* Animations */
+
+.card3-top {
+  animation-name: foreground-c3;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card3-back {
+  animation-name: background-c3;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes background-c3 {
+  0%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+/*    z-index: 1; */
+    transform: perspective(100px) translate3d(-80px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
+  }
+}
+
+@keyframes foreground-c3 {
+  0%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(-50px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50%{
+    transform: perspective(100px) translate3d(80px, 0px, -15px);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(-80px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+/*New - Card 4*/
+
+.card4 {
+  background: #d395ff;
+  color: rgba(255,255,255,0.7)
+}
+
+/* Animations */
+
+.card4-top {
+  animation-name: foreground-c4;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card4-back {
+  animation-name: background-c4;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes background-c4 {
+  0%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+/*    z-index: 1; */
+    transform: perspective(100px) translate3d(-80px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    filter: blur(2px);
+  }
+}
+
+@keyframes foreground-c4 {
+  0%{
+    z-index: 1;
+    transform: perspective(100px) translate3d(-50px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50%{
+    transform: perspective(100px) translate3d(80px, 0px, -15px);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+  }
+  100%{
+    z-index: 2;
+    transform: perspective(100px) translate3d(-80px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column; 
+    justify-content: flex-start;
+  }
+  .card{
+    width: 40vw;
+    margin-left: 30vw;
+    height: 50vh;
+  }
+  .pic{
+    
+    opacity:0;
+    }
+}

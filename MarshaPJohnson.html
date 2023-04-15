@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="MarshaPJ.css">
+        <title>Marsha P. Johnson</title>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <nav class = "navbar">
+                <div class = "contain">
+                    <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                    <div class = "navbar-nav">
+                      <a href = "about.html">About</a>
+                      <a href = "article.html">Article</a>
+                      <a href = "contact.html">Contact</a>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+        <div class="name">
+            <h1>Marsha P. Johnson</h1>
+        </div>
+        <div class="year">
+            <h2>1945 - 1992</h2>
+        </div>
+        <div class="pic">
+            <img src="images/STOCKS&SOCIAL.png" alt="Marsha P Johnson" height="500vh">
+        </div>
+        <div class="container">
+            <div class="card card1 card1-top">
+                <dl>
+                    <dt class="dt-heading">Early Life</dt>
+                    <dd>Marsha P. Johnson was born on August 24, 1945 in Elizabeth, New Jersey.</dd>
+                    <dd>She was the fifth of seven children in her family.</dd>
+                    <dd>Johnson experienced discrimination and bullying for being effeminate as a child.</dd>
+                    <dd>She moved to New York City in 1963 and began working as a prostitute to support herself.</dd>
+                </dl>
+                <button onclick="button1()">Next</button>
+            </div>
+
+            <div class="card card2 card2-back">
+                <dl>
+                    <dt class="dt-heading">Achievements</dt>
+                    <dd>Johnson became involved in the LGBTQ+ rights movement in the 1960s, and was present during the Stonewall uprising in 1969.</dd>
+                    <dd>She co-founded the Street Transvestite Action Revolutionaries (STAR) with Sylvia Rivera in 1970, an organization that provided support for homeless and runaway LGBTQ+ youth.</dd>
+                    <dd>Johnson was a drag queen and performer, often performing at the popular gay club, The Stonewall Inn.</dd>
+                    <dd>Johnson was also an activist for AIDS awareness and treatment in the 1980s.</dd>
+                </dl>
+                <button onclick="button2()">Next</button>
+            </div>
+
+            <div class="card card3 card3-back">
+                <dl>
+                    <dt class="dt-heading">Challenges</dt>
+                    <dd>In the 1970s, Johnson experienced a series of mental health breakdowns and spent time in and out of psychiatric hospitals. </dd>
+                    <dd>She also continued to engage in sex work, not knowing any other way to make money, and continued to get arrested. </dd>
+                    <dd>In 1990, Johnson was diagnosed with H.I.V. She spoke publicly about her diagnosis and how people should not be afraid of those with the disease in a June 26, 1992 interview.</dd>
+                    <dd>She died on July 6, 1992, under mysterious circumstances, and her death was initially ruled a suicide, but many believed she was murdered.</dd>
+                </dl>
+                <button onclick="button3()">Next</button>
+            </div>
+
+            <div class="card card4 card4-back">
+                <dl>
+                    <dt class="dt-heading">Personal Life</dt>
+                    <dd>She was known for her unique and colorful style, which included wearing flower crowns and carrying a purse filled with flowers and other trinkets.</dd>
+                    <dd>According to her nephew, Johnson always maintained a close but fraught relationship with her family back in New Jersey.</dd>
+                    <dd>In an interview Johnson did for a 1972 book, she said her ambition was “to see gay people liberated and free and to have equal rights that other people have in America.”</dd>
+                </dl>
+                <button onclick="button4()">Next</button>
+            </div>
+
+        </div>
+        <script src="marie.js"></script>
+        
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "9cabaaa3-e97d-483a-8bd9-c2caf2a4f039", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "74cd3fc0-70df-4586-8572-7a5591c4b68b", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </body>
+
+</html>

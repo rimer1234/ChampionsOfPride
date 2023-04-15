@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="OscarWilde.css">
+        <title>Oscar Wilde</title>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <nav class = "navbar">
+                <div class = "contain">
+                    <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                    <div class = "navbar-nav">
+                      <a href = "about.html">About</a>
+                      <a href = "article.html">Article</a>
+                      <a href = "contact.html">Contact</a>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+        <div class="name">
+            <h1>Oscar Wilde</h1>
+        </div>
+        <div class="year">
+            <h2>1854 - 1900</h2>
+        </div>
+        <div class="pic">
+            <img src="images/Constellations.png" alt="Oscar Wilde" height="500vh">
+        </div>
+        <div class="container">
+            <div class="card card1 card1-top">
+                <dl>
+                    <dt class="dt-heading">Early Life</dt>
+                    <dd>Born on October 16, 1854, in Dublin, Ireland.</dd>
+                    <dd>Showed a talent for writing from a young age and went on to attend Trinity College in Dublin and Oxford University.</dd>
+                    <dd>Became known for his wit and flamboyant style, and was often the center of attention in social circles.
+                    </dd>
+                </dl>
+                <button onclick="button1()">Next</button>
+            </div>
+
+            <div class="card card2 card2-back">
+                <dl>
+                    <dt class="dt-heading">Achievements</dt>
+                    <dd>Was a playwright, poet, and author who is considered one of the greatest writers in the English language.</dd>
+                    <dd>Wrote plays such as "The Importance of Being Earnest" and "An Ideal Husband" that are still performed today.</dd>
+                    <dd>Also wrote the novel "The Picture of Dorian Gray" and numerous other works of fiction, nonfiction, and poetry.</dd>
+                    <dd>Was known for his wit and aestheticism, which challenged Victorian-era norms.</dd>
+                </dl>
+                <button onclick="button2()">Next</button>
+            </div>
+
+            <div class="card card3 card3-back">
+                <dl>
+                    <dt class="dt-heading">Challenges</dt>
+                    <dd>Was convicted of "gross indecency" in 1895 due to his homosexuality and spent two years in prison.</dd>
+                    <dd>Suffered a public downfall and was ostracized by society after his conviction.</dd>
+                    <dd>Became bankrupt after his release from prison and face constant money problems</dd>
+                </dl>
+                <button onclick="button3()">Next</button>
+            </div>
+
+            <div class="card card4 card4-back">
+                <dl>
+                    <dt class="dt-heading">Personal Life</dt>
+                    <dd>Was married to Constance Lloyd, with whom he had two children, but was also involved in numerous homosexual relationships.</dd>
+                    <dd>Was a spokesman for Aestheticism, in the early 1880s he gave a lecture tour in the U.S. and established himself in London circles by his wit and flamboyance.</dd>
+                    <dd>Died on November 30, 1900, at the age of 46, from meningitis.</dd>
+                    <dd>Has since been recognized as an LGBTQ icon and a literary genius, with his works and life continuing to inspire and influence people today.</dd>
+                </dl>
+                <button onclick="button4()">Next</button>
+            </div>
+
+        </div>
+        <script src="marie.js"></script>
+        
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "e775b08b-5415-4e1d-a3ea-ba27b0bcbdf4", // The ID of this integration.
+              region: "us-south", // The region your integration is hosted in.
+              serviceInstanceID: "5077f1fd-cfd6-4156-9d5c-7af3b7e00779", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+        </script>
+          
+    </body>
+
+</html>

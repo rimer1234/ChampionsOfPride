@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Christine.css">
+        <title>RuPaul</title>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header>
+            <nav class = "navbar">
+                <div class = "contain">
+                    <a href = "index.html" class = "navbar-brand">Champions of Pride</a>
+                    <div class = "navbar-nav">
+                      <a href = "about.html">About</a>
+                      <a href = "article.html">Article</a>
+                      <a href = "contact.html">Contact</a>
+                    </div>
+                  </div>
+            </nav>
+        </header>
+        <div class="name">
+            <h1>Christine Jorgensen</h1>
+        </div>
+        <div class="year">
+            <h2>1926 - 1989</h2>
+        </div>
+        <div class="pic">
+            <img src="images/INTERVEIW.png" alt="Christine Jorgensen" height="500vh">
+        </div>
+        <div class="container">
+            <div class="card card1 card1-top">
+                <dl>
+                    <dt class="dt-heading">Early Life</dt>
+                    <dd>Born on May 30, 1926 in the Bronx, New York City.</dd>
+                    <dd>Assigned male at birth but identified as female from a young age.</dd>
+                    <dd>Served in the U.S. Army during World War II and began exploring her gender identity after returning home.</dd>
+                    <dd>Traveled to Denmark in the early 1950s to undergo gender confirmation surgery, becoming one of the first widely known people to do so.</dd>
+                </dl>
+                <button onclick="button1()">Next</button>
+            </div>
+
+            <div class="card card2 card2-back">
+                <dl>
+                    <dt class="dt-heading">Achievements</dt>
+                    <dd>Became the first person in the United States to undergo gender reassignment surgery in 1952, which garnered national attention and sparked a public conversation about gender identity and expression.</dd>
+                    <dd>Became a well-known transgender rights advocate and speaker.</dd>
+                    <dd>Starred in several films and television shows in the 1950s and 1960s, and wrote an autobiography titled "Christine Jorgensen: A Personal Autobiography".</dd>
+                </dl>
+                <button onclick="button2()">Next</button>
+            </div>
+
+            <div class="card card3 card3-back">
+                <dl>
+                    <dt class="dt-heading">Challenges</dt>
+                    <dd>Originally intended to live a quiet life after surgery, but her letter to her parents regarding her change in gender was leaked and published on the New York Daily News.</dd>
+                    <dd>Faced significant discrimination and harassment due to her gender identity, but continued to advocate for transgender rights.</dd>
+                    <dd>Had her engagement broken due to the fact that she could not get married to her fiancee and her fiancee lost his job due to transphobia.</dd>
+                </dl>
+                <button onclick="button3()">Next</button>
+            </div>
+
+            <div class="card card4 card4-back">
+                <dl>
+                    <dt class="dt-heading">Personal Life</dt>
+                    <dd>Came out as transgender in the early 1950s and underwent gender reassignment surgery in Denmark.</dd>
+                    <dd>Died on May 3, 1989, at the age of 62, from bladder and lung cancer.</dd>
+                    <dd>Her legacy as a transgender pioneer continues to inspire and educate people about the experiences of transgender individuals.</dd>
+                </dl>
+                <button onclick="button4()">Next</button>
+            </div>
+
+        </div>
+        <script src="marie.js"></script>
+        
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "85f6a370-4624-4788-a8d8-90f5d069e492", // The ID of this integration.
+              region: "us-east", // The region your integration is hosted in.
+              serviceInstanceID: "74cd3fc0-70df-4586-8572-7a5591c4b68b", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </body>
+
+</html>
